@@ -12,3 +12,5 @@ var SongQueueView = Backbone.View.extend({
   }
 
 });
+
+// put play emitter
