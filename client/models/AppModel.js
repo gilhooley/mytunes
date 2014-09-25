@@ -2,8 +2,6 @@
 var AppModel = Backbone.Model.extend({
 
   initialize: function(params){
-    //
-    //this.set('library'), new Library(params aka songData)
     this.set('currentSong', new SongModel());
     this.set('songQueue', new SongQueue());
 
@@ -21,17 +19,8 @@ var AppModel = Backbone.Model.extend({
 
     params.library.on('enqueue', function(song){
       this.get('songQueue').add(song);
-      //console.log(this.attributes);
     }, this);
 
-
   },
-
-
-    // listen for enqueue
-    // take model that was queued/clicked
-    // push to songQueue
-    //
-
 
 });
