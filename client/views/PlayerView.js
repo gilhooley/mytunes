@@ -8,8 +8,12 @@ var PlayerView = Backbone.View.extend({
   initialize: function() {
   },
   events: {
+    // comes from the DOM
     'ended': function(){
-      console.log("done");
+      console.log("audio element emits 'done'");
+      this.model.ended();
+      //console.log(this.model);
+      // if songQueue.length call play
     }
   },
 
@@ -17,6 +21,8 @@ var PlayerView = Backbone.View.extend({
     this.model = song;
     this.render();
   },
+
+
 
   render: function(){
     return this.$el.attr('src', this.model ? this.model.get('url') : '');

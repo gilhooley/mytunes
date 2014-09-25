@@ -7,6 +7,12 @@ var SongQueueView = Backbone.View.extend({
     this.render();
   },
 
+  events: {
+    'dequeue': function(){
+      console.log('dequeue on songcollection')
+    }
+  },
+
   render: function() {
     this.$el.html('<th>Song Queue</th>');
   }
