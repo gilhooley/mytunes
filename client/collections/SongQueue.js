@@ -10,7 +10,7 @@ var SongQueue = Songs.extend({
       // if this model is songQUeue[0],
       // set the current song to this song and play it.
       //console.log('songqueue changed');
-      console.log(this);
+       //sconsole.log(this);
       if (this.length === 1) {
         this.playFirst();
       }
@@ -20,9 +20,9 @@ var SongQueue = Songs.extend({
       this.remove();
     }, this);
     this.on('ended', function(){
-      console.log(this);
+      //console.log(this);
       this.shift();
-      console.log(this);
+      //console.log(this);
       if (this.length > 0) {
         this.playFirst();
 
