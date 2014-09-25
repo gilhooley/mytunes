@@ -10,10 +10,11 @@ var PlayerView = Backbone.View.extend({
   events: {
     // comes from the DOM
     'ended': function(){
-      console.log("audio element emits 'done'");
+      // console.log("audio element emits 'done'");
       this.model.ended();
+      // console.log(this.model.collection);
       //console.log(this.model);
-      // if songQueue.length call play
+      //songqueue.playFirst();
     }
   },
 
