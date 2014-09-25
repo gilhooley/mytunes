@@ -8,7 +8,13 @@ var SongQueue = Songs.extend({
       }
     }, this);
     this.on('dequeue', function(model){
-      this.remove(model);
+      if (this.at(0) === model && this.length > 1) {
+        this.remove(model);
+        this.at(0).play();
+      } else {
+        this.remove(model);
+      }
+
     }, this);
     this.on('ended', function(){
       this.shift();
