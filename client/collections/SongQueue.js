@@ -9,8 +9,6 @@ var SongQueue = Songs.extend({
     }, this);
     this.on('dequeue', function(model){
       this.remove(model);
-      console.log(this);
-      console.log('I should be removed');
     }, this);
     this.on('ended', function(){
       this.shift();
